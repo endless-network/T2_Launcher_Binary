@@ -1,0 +1,75 @@
+{
+    "app-id": "com.endlessm.terminaltwo",
+    "runtime": "org.gnome.Platform",
+    "runtime-version": "3.34",
+    "sdk": "org.gnome.Sdk",
+    "command": "com.endlessm.terminaltwo.sh",
+    "separate-locales": false,
+    "build-options" : {
+        "no-debuginfo": true,
+        "strip": true
+    },
+    "finish-args": [
+        "--share=ipc",
+        "--share=network",
+        "--socket=x11",
+        "--socket=pulseaudio",
+        "--device=dri"
+    ],
+    "modules": [
+        {
+          "name": "zypak",
+          "sources": [
+            {
+              "type": "git",
+              "url": "https://github.com/refi64/zypak",
+              "tag": "v2019.11beta.3"
+            }
+          ]
+        },
+        {
+            "name": "TerminalTwo",
+            "buildsystem": "simple",
+            "only-arches": ["x86_64"],
+            "build-commands": [
+                "unzip TerminalTwo.zip",
+                "mkdir -p /app/main /app/bin",
+                "cp -a $(ls -d TerminalTwo/* | grep -v '\.so$') /app/main",
+                "install -Dm755 com.endlessm.terminaltwo.sh /app/bin/com.endlessm.terminaltwo.sh",
+                "install -pDm755 TerminalTwo/libEGL.so /app/lib/libEGL.so",
+                "install -pDm755 TerminalTwo/libffmpeg.so /app/lib/libffmpeg.so",
+                "install -pDm755 TerminalTwo/libGLESv2.so /app/lib/libGLESv2.so",
+                "install -Dm644 com.endlessm.terminaltwo_128.png /app/share/icons/hicolor/128x128/apps/com.endlessm.terminaltwo.png",
+                "install -Dm644 com.endlessm.terminaltwo.desktop /app/share/applications/com.endlessm.terminaltwo.desktop",
+                "install -Dm644 com.endlessm.terminaltwo.metainfo.xml /app/share/metainfo/com.endlessm.terminaltwo.metainfo.xml"
+            ],
+            "sources" : [
+                {
+                    "type": "script",
+                    "dest-filename": "com.endlessm.terminaltwo.sh",
+                    "commands": [
+                        "exec zypak-wrapper /app/main/terminaltwo"
+                    ]
+                },
+                {
+                    "type": "file",
+                    "path": "/tmp/t2/T2_Launcher_Binary/com.endlessm.terminaltwo_128.png"
+                },
+                {
+                    "type": "file",
+                    "path": "/tmp/t2/T2_Launcher_Binary/com.endlessm.terminaltwo.desktop"
+                },
+                {
+                    "type": "file",
+                    "path": "/tmp/t2/T2_Launcher_Binary/com.endlessm.terminaltwo.metainfo.xml"
+                },
+                {
+                    "type": "file",
+                    "path": "/tmp/t2/releases/0.3.0/TerminalTwo.zip",
+                    "sha256":"865fbb6d8e7b6be67f8fb21986e28a22957d3ddcdc8606149e349dda910b6a07"
+                }
+
+            ]
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Name=Terminal Two
+Exec=com.endlessm.terminaltwo.sh
+Terminal=false
+Type=Application
+Icon=com.endlessm.terminaltwo
+StartupWMClass=Terminal Two
+Comment=Terminal Two
+Categories=Game;X-LearnToCode;
+Keywords=game;programming;puzzle;casual;

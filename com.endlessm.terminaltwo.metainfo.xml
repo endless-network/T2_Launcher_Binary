@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2019 Endless Network -->
+<component type="desktop-application">
+  <id>com.endlessm.terminaltwo</id>
+  <name>Terminal Two</name>
+  <developer_name>Endless</developer_name>
+  <summary>Launch Endless games with Terminal Two</summary>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>LicenseRef-proprietary</project_license>
+  <url type="homepage">https://terminaltwo.com</url>
+  <url type="bugtracker">https://community.endlessos.com/</url>
+  <description>
+    <p>Learn how to program with Endless games.</p>
+  </description>
+  <releases>
+    <release version="0.3.0" date="2019-11-25"/>
+  </releases>
+  <screenshots>
+    <screenshot type="default">
+      <image>https://github.com/endless-network/T2_Launcher_Binary/raw/master/screenshot1.png</image>
+    </screenshot>
+  </screenshots>
+    <content_rating type="oars-1.1">
+  </content_rating>
+  <update_contact>nan@endlessnetwork.com</update_contact>
+</component>
