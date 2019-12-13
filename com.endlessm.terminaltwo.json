@@ -52,20 +52,13 @@
                     ]
                 },
                 {
-                    "type": "file",
-                    "path": "/tmp/t2/T2_Launcher_Binary/com.endlessm.terminaltwo_128.png"
+                    "type": "git",
+                    "url": "https://github.com/endless-network/T2_Launcher_Binary.git",
+                    "tag":"v0.3.0"
                 },
                 {
                     "type": "file",
-                    "path": "/tmp/t2/T2_Launcher_Binary/com.endlessm.terminaltwo.desktop"
-                },
-                {
-                    "type": "file",
-                    "path": "/tmp/t2/T2_Launcher_Binary/com.endlessm.terminaltwo.metainfo.xml"
-                },
-                {
-                    "type": "file",
-                    "path": "/tmp/t2/releases/0.3.0/TerminalTwo.zip",
+                    "url": "https://github.com/endless-network/T2_Launcher_Binary/releases/download/v0.3.0/TerminalTwo.zip",
                     "sha256":"865fbb6d8e7b6be67f8fb21986e28a22957d3ddcdc8606149e349dda910b6a07"
                 }
 
