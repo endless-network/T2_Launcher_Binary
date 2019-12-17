@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2019 Endless Network -->
 <component type="desktop-application">
-  <id>com.endlessm.terminaltwo</id>
+  <id>com.endlessnetwork.terminaltwo</id>
   <name>Terminal Two</name>
   <developer_name>Endless</developer_name>
   <summary>Launch Endless games with Terminal Two</summary>

@@ -1,9 +1,9 @@
 {
-    "app-id": "com.endlessm.terminaltwo",
+    "app-id": "com.endlessnetwork.terminaltwo",
     "runtime": "org.gnome.Platform",
     "runtime-version": "3.34",
     "sdk": "org.gnome.Sdk",
-    "command": "com.endlessm.terminaltwo.sh",
+    "command": "com.endlessnetwork.terminaltwo.sh",
     "separate-locales": false,
     "build-options" : {
         "no-debuginfo": true,
@@ -52,25 +52,24 @@
                 "unzip TerminalTwo.zip",
                 "mkdir -p /app/main /app/bin",
                 "cp -a $(ls -d TerminalTwo/* | grep -v '\.so$') /app/main",
-                "install -Dm755 com.endlessm.terminaltwo.sh /app/bin/com.endlessm.terminaltwo.sh",
+                "install -Dm755 com.endlessnetwork.terminaltwo.sh /app/bin/com.endlessnetwork.terminaltwo.sh",
                 "install -pDm755 TerminalTwo/libEGL.so /app/lib/libEGL.so",
                 "install -pDm755 TerminalTwo/libGLESv2.so /app/lib/libGLESv2.so",
-                "install -Dm644 com.endlessm.terminaltwo_128.png /app/share/icons/hicolor/128x128/apps/com.endlessm.terminaltwo.png",
-                "install -Dm644 com.endlessm.terminaltwo.desktop /app/share/applications/com.endlessm.terminaltwo.desktop",
-                "install -Dm644 com.endlessm.terminaltwo.metainfo.xml /app/share/metainfo/com.endlessm.terminaltwo.metainfo.xml"
+                "install -Dm644 com.endlessnetwork.terminaltwo_128.png /app/share/icons/hicolor/128x128/apps/com.endlessnetwork.terminaltwo.png",
+                "install -Dm644 com.endlessnetwork.terminaltwo.desktop /app/share/applications/com.endlessnetwork.terminaltwo.desktop",
+                "install -Dm644 com.endlessnetwork.terminaltwo.metainfo.xml /app/share/metainfo/com.endlessnetwork.terminaltwo.metainfo.xml"
             ],
             "sources" : [
                 {
                     "type": "script",
-                    "dest-filename": "com.endlessm.terminaltwo.sh",
+                    "dest-filename": "com.endlessnetwork.terminaltwo.sh",
                     "commands": [
                         "exec zypak-wrapper /app/main/terminaltwo"
                     ]
                 },
                 {
-                    "type": "git",
-                    "url": "https://github.com/endless-network/T2_Launcher_Binary.git",
-                    "tag":"v0.3.0"
+                    "type": "dir",
+                    "path": "."
                 },
                 {
                     "type": "file",
