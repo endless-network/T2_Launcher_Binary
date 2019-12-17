@@ -7,5 +7,5 @@ Type=Application
 Icon=com.endlessnetwork.terminaltwo
 StartupWMClass=Terminal Two
 Comment=Terminal Two
-Categories=Game;X-LearnToCode;
+Categories=Game;LearnToCode;
 Keywords=game;programming;puzzle;casual;
