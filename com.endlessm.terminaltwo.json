@@ -29,6 +29,22 @@
           ]
         },
         {
+            "//": "unencumbered ffmpeg binary",
+            "name": "ffmpeg",
+            "buildsystem": "simple",
+            "only-arches": ["x86_64"],
+            "build-commands": [
+                "install -pDm755 libffmpeg.so /app/lib/libffmpeg.so"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://github.com/electron/electron/releases/download/v6.1.7/ffmpeg-v6.1.7-linux-x64.zip",
+                    "sha256": "b25bb9a685dfa5e2cd50e01a80a891d7ea9a27d90cd2bcdc172829251c4dc29a"
+                }
+            ]
+        },
+        {
             "name": "TerminalTwo",
             "buildsystem": "simple",
             "only-arches": ["x86_64"],
@@ -38,7 +54,6 @@
                 "cp -a $(ls -d TerminalTwo/* | grep -v '\.so$') /app/main",
                 "install -Dm755 com.endlessm.terminaltwo.sh /app/bin/com.endlessm.terminaltwo.sh",
                 "install -pDm755 TerminalTwo/libEGL.so /app/lib/libEGL.so",
-                "install -pDm755 TerminalTwo/libffmpeg.so /app/lib/libffmpeg.so",
                 "install -pDm755 TerminalTwo/libGLESv2.so /app/lib/libGLESv2.so",
                 "install -Dm644 com.endlessm.terminaltwo_128.png /app/share/icons/hicolor/128x128/apps/com.endlessm.terminaltwo.png",
                 "install -Dm644 com.endlessm.terminaltwo.desktop /app/share/applications/com.endlessm.terminaltwo.desktop",
