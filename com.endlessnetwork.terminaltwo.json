@@ -49,12 +49,10 @@
             "buildsystem": "simple",
             "only-arches": ["x86_64"],
             "build-commands": [
-                "unzip TerminalTwo.zip",
                 "mkdir -p /app/main /app/bin",
-                "cp -a $(ls -d TerminalTwo/* | grep -v '\.so$') /app/main",
+                "cp -a TerminalTwo/* /app/main",
+                "rm /app/main/libffmpeg.so",
                 "install -Dm755 com.endlessnetwork.terminaltwo.sh /app/bin/com.endlessnetwork.terminaltwo.sh",
-                "install -pDm755 TerminalTwo/libEGL.so /app/lib/libEGL.so",
-                "install -pDm755 TerminalTwo/libGLESv2.so /app/lib/libGLESv2.so",
                 "install -Dm644 com.endlessnetwork.terminaltwo_128.png /app/share/icons/hicolor/128x128/apps/com.endlessnetwork.terminaltwo.png",
                 "install -Dm644 com.endlessnetwork.terminaltwo.desktop /app/share/applications/com.endlessnetwork.terminaltwo.desktop",
                 "install -Dm644 com.endlessnetwork.terminaltwo.metainfo.xml /app/share/metainfo/com.endlessnetwork.terminaltwo.metainfo.xml"
@@ -72,9 +70,10 @@
                     "path": "."
                 },
                 {
-                    "type": "file",
+                    "type": "archive",
                     "url": "https://github.com/endless-network/T2_Launcher_Binary/releases/download/v0.3.0/TerminalTwo.zip",
-                    "sha256":"865fbb6d8e7b6be67f8fb21986e28a22957d3ddcdc8606149e349dda910b6a07"
+                    "sha256":"865fbb6d8e7b6be67f8fb21986e28a22957d3ddcdc8606149e349dda910b6a07",
+                    "strip-components": 0
                 }
 
             ]
