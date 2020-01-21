@@ -71,8 +71,8 @@
                 },
                 {
                     "type": "archive",
-                    "url": "https://github.com/endless-network/T2_Launcher_Binary/releases/download/v0.3.0/TerminalTwo.zip",
-                    "sha256":"865fbb6d8e7b6be67f8fb21986e28a22957d3ddcdc8606149e349dda910b6a07",
+                    "url": "https://github.com/endless-network/T2_Launcher_Binary/releases/download/v0.4.3/TerminalTwo.zip",
+                    "sha256":"36dcb20d807f5bfbc87237bb8dda28ef32019160a943f8942bd4694a6478a9a1",
                     "strip-components": 0
                 }
 
